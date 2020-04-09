@@ -9,7 +9,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function generatePassword() {
+generatePassword = () => {
   // Grab data from user
   var characterLength = prompt("How many characters would you like your password to contain?");
   // Convert user input (string) into number
@@ -28,8 +28,10 @@ function generatePassword() {
   // Check if user input fits criteria
   if (lengthInt < 8) {
       alert("Your password must contain a minimum of 8 characters.");
+      return '';
   } else if (lengthInt > 128) {
       alert("Your password can only contain up to 128 characters.");
+      return '';
   } else if (lengthInt >= 8 || lengthInt <= 128) {
       var lowerCase = confirm("Click OK if you would like lowercase letters in your password.");
         if (lowerCase === true) {
