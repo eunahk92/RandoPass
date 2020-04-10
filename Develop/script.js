@@ -53,9 +53,9 @@ generatePassword = () => {
           var userArray = userArray.concat(specialArr);
           // console.log(userArray);
         } 
-      // Check to see if user chose at least one statement
+      // Check to see if user chose at least one criteria
       if (lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
-      alert("Your password must contain at least one property in order to generate. Please try again.")
+        alert("Your password must contain at least one property in order to generate. Please try again.")
       }
   } else {
       return '';
@@ -69,7 +69,6 @@ generatePassword = () => {
   return password;
 }
 
-generatePassword();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
